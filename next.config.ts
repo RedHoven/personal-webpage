@@ -1,10 +1,11 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
-  /* config options here */
-  basePath: '/RedHoven',
   trailingSlash: true,
   output: 'export',
+  assetPrefix: isProd ? '/personal-webpage' : '',
 };
 
-module.exports = nextConfig;
+export default nextConfig;
