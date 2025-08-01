@@ -14,7 +14,7 @@ export default function Home() {
           </div>
         </div>
         {/* Right Column - Links */}
-        <div className="flex text-2xl flex-col font-sans items-start p-4 sm:py-0 sm:px-4 w-full md:w-1/2 mx-auto text-left">
+        <div className="flex text-2xl flex-col font-sans items-start p-4 sm:py-0 sm:px-4 w-full md:w-1/4 mx-auto text-left">
             <a
               href={`${prefix}/cv`}
               className="flex items-center text-muted-foreground hover:text-accent transition-colors"
