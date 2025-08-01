@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 
 export default function Viewer() {
+  const prefix = process.env.NODE_ENV === "production" ? "/personal-webpage" : "";
   return (
     <div className="w-full min-h-screen bg-background flex items-center justify-center p-4">
       {/* Mobile */}
@@ -23,14 +24,14 @@ export default function Viewer() {
       {/* Desktop */}
       <div className="hidden md:block w-full h-screen">
         <object
-          data="/dziomin-cv-tudelft-2025.pdf"
+          data={`${prefix}/dziomin-cv-tudelft-2025.pdf`}
           type="application/pdf"
           className="w-full h-full"
         >
           <p className="text-center p-4 text-foreground font-sans">
             Your browser can&apos;t display PDFs.{" "}
             <a
-              href="/dziomin-cv-tudelft-2025.pdf"
+              href={`${prefix}/dziomin-cv-tudelft-2025.pdf`}
               className="text-accent underline"
             >
               Download the CV here
