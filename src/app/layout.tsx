@@ -9,7 +9,6 @@ const robotoSlab = Roboto_Slab({
 
 export const metadata: Metadata = {
   title: "Yahor Dziomin",
-  description: "Welcome to my personal page!",
 };
 
 export default function RootLayout({
