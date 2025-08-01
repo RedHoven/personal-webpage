@@ -10,7 +10,7 @@ export default function Viewer() {
             You can download my CV below. For best viewing experience, use a computer.
           </p>
           <a
-            href="/dziomin-cv-tudelft-2025.pdf"
+            href="/RedHoven/dziomin-cv-tudelft-2025.pdf"
             download
             className="flex items-center text-muted-foreground hover:text-accent transition-colors text-lg"
           >
@@ -23,14 +23,14 @@ export default function Viewer() {
       {/* 🖥️ Desktop: fullscreen viewer */}
       <div className="hidden md:block w-full h-screen">
         <object
-          data="/dziomin-cv-tudelft-2025.pdf"
+          data="/RedHoven/dziomin-cv-tudelft-2025.pdf"
           type="application/pdf"
           className="w-full h-full"
         >
           <p className="text-center p-4 text-foreground font-sans">
             Your browser can&apos;t display PDFs.{" "}
             <a
-              href="/dziomin-cv-tudelft-2025.pdf"
+              href="/RedHoven/dziomin-cv-tudelft-2025.pdf"
               className="text-accent underline"
             >
               Download the CV here
