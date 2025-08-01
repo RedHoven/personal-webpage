@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 
 export default function Home() {
+  const prefix = process.env.NODE_ENV === 'production' ? '/personal-webpage' : '';
   return (
     <div className="font flex flex-col items-center justify-center min-h-screen">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4 p-4 md:w-2/3 sm:w-full mx-auto">
@@ -15,7 +16,7 @@ export default function Home() {
         {/* Right Column - Links */}
         <div className="flex text-2xl flex-col font-sans items-start p-4 sm:py-0 sm:px-4 w-full md:w-1/2 mx-auto text-left">
             <a
-              href="./cv"
+              href={`${prefix}/cv`}
               target="_blank"
               className="flex items-center text-muted-foreground hover:text-accent transition-colors"
             >
