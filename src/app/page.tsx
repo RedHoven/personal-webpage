@@ -4,13 +4,26 @@ export default function Home() {
   const prefix = process.env.NODE_ENV === 'production' ? '/personal-webpage' : '';
   return (
     <div className="font flex flex-col items-center justify-center min-h-screen">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4 p-4 md:w-2/3 sm:w-full mx-auto">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4 p-4 md:w-3/4 sm:w-full mx-auto">
         {/* Name and about section. */}
         <div className="text-2xl font-sans sm:flex sm:items-center px-4 py-2 text-left mx-auto">
           <div>
             <h1 className="text-accent"><b>Yahor Dziomin</b></h1>
             <p className="text-muted-foreground text-xl md:text-2xl">Eager to advance <span className="text-accent">AI technology</span> and its applications.</p> 
-            <p className="text-muted-foreground text-xl md:text-2xl">Master student at <span className="text-accent">TU Delft</span>, Developer Trainee at <span className="text-accent">SyreSync</span> (Visma). </p>
+            <p className="text-muted-foreground text-xl md:text-2xl">Master student at&nbsp;
+              <span className="text-accent"> 
+                <a href="https://www.tudelft.nl/en/">
+                  TU Delft
+                  <ExternalLink className="w-4 h-4 inline-block align-center mx-1" />
+                </a>
+              </span>, 
+              Developer Trainee at <span className="text-accent">
+                <a href="https://suresync.nl/en/">
+                  SureSync
+                  <ExternalLink className="w-4 h-4 inline-block align-center mx-1" />
+                </a>
+              </span>(Visma).
+            </p>
           </div>
         </div>
         {/* Right Column - Links */}
