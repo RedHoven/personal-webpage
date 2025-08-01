@@ -28,7 +28,7 @@ export default function Viewer() {
           className="w-full h-full"
         >
           <p className="text-center p-4 text-foreground font-sans">
-            Your browser can't display PDFs.{" "}
+            Your browser can&apos;t display PDFs.{" "}
             <a
               href="/dziomin-cv-tudelft-2025.pdf"
               className="text-accent underline"

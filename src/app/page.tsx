@@ -9,7 +9,7 @@ export default function Home() {
           <div>
             <h1 className="text-accent"><b>Yahor Dziomin</b></h1>
             <p className="text-muted-foreground text-xl md:text-2xl">Eager to advance <span className="text-accent">AI technology</span> and its applications.</p> 
-            <p className="text-muted-foreground text-xl md:text-2xl">I'm a master student at <span className="text-accent">TU Delft</span>, Developer Trainee at <span className="text-accent">SyreSync</span> (Visma). </p>
+            <p className="text-muted-foreground text-xl md:text-2xl">I&apos;m a master student at <span className="text-accent">TU Delft</span>, Developer Trainee at <span className="text-accent">SyreSync</span> (Visma). </p>
           </div>
         </div>
         {/* Right Column - Links */}
