@@ -1,23 +1,22 @@
-import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="font flex flex-col items-center justify-center min-h-screen">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4 p-4 md:w-1/2 sm:w-full mx-auto">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4 p-4 md:w-2/3 sm:w-full mx-auto">
         {/* Name and about section. */}
-        <div className="border text-2xl font-sans w-4/5 sm:flex sm:items-center px-4 py-2 text-left mx-auto">
+        <div className="text-2xl font-sans sm:flex sm:items-center px-4 py-2 text-left mx-auto">
           <div>
-            <h1 className="text-accent"><b>name</b></h1>
-            <h2 className="text-foreground">Master student at <span className="text-accent">TU Delft</span></h2>
-            <br />
-            <p>Welcome to my personal page! Stay tuned for more updates. Keep an eye on the page for new content!</p>
+            <h1 className="text-accent"><b>Yahor Dziomin</b></h1>
+            <p className="text-muted-foreground text-xl md:text-2xl">Eager to advance <span className="text-accent">AI technology</span> and its applications.</p> 
+            <p className="text-muted-foreground text-xl md:text-2xl">I'm a master student at <span className="text-accent">TU Delft</span>, Developer Trainee at <span className="text-accent">SyreSync</span> (Visma). </p>
           </div>
         </div>
         {/* Right Column - Links */}
-        <div className="border flex text-2xl flex-col font-sans items-start p-4 sm:py-0 sm:px-4 w-1/3 mx-auto text-left">
+        <div className="flex text-2xl flex-col font-sans items-start p-4 sm:py-0 sm:px-4 w-full md:w-1/2 mx-auto text-left">
             <a
               href="/cv"
+              target="_blank"
               className="flex items-center text-muted-foreground hover:text-accent transition-colors"
             >
               <span className="mr-2">CV</span>
