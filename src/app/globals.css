@@ -7,6 +7,13 @@
   --accent: #1F305E;
 }
 
+.dark {
+  --background: #121212;
+  --foreground: #ededed;
+  --muted-foreground: #bbbbbb;
+  --accent: #aabfff;
+}
+
 @theme inline {
   --color-accent: var(--accent);
   --color-background: var(--background);
