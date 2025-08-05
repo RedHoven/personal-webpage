@@ -18,6 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="color-scheme" content="light dark" />
+        <script src="/theme.js" />
+      </head>
       <body
         className={`${robotoSlab.variable} antialiased`}
       >

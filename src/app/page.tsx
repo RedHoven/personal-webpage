@@ -7,17 +7,29 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const shouldUseDark = stored === 'dark' || (!stored && prefersDark);
-    document.documentElement.classList.toggle('dark', shouldUseDark);
-    setDarkMode(shouldUseDark);
-  }, []);
+  const stored = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const shouldUseDark = stored === 'dark' || (!stored && prefersDark);
+
+  if (shouldUseDark) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+  
+  setDarkMode(shouldUseDark);
+}, []);
+
 
   const toggleTheme = () => {
     const newMode = !darkMode;
-    document.documentElement.classList.toggle('dark', newMode);
-    localStorage.setItem('theme', newMode ? 'dark' : 'light');
+    if (newMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
     setDarkMode(newMode);
   };
 
