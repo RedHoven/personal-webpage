@@ -22,15 +22,6 @@
   --font-sans: var(--font-roboto-slab);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    --foreground: #ededed;
-    --muted-foreground: #bbbbbb;
-    --accent: #aabfff;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);

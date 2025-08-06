@@ -1,68 +1,18 @@
 "use client";
 
-import { ExternalLink, Sun, Moon } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ExternalLink } from "lucide-react";
+import dynamic from "next/dynamic";
+const ThemeToggle = dynamic(() => import("../components/ThemeToggle"), {
+  ssr: false,
+});
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-  const stored = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const shouldUseDark = stored === 'dark' || (!stored && prefersDark);
-
-  if (shouldUseDark) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
-  
-  setDarkMode(shouldUseDark);
-}, []);
-
-
-  const toggleTheme = () => {
-    const newMode = !darkMode;
-    if (newMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-    setDarkMode(newMode);
-  };
 
   const prefix = process.env.NODE_ENV === 'production' ? '/personal-webpage' : '';
   return (
     <div className="bg-background text-foreground">
       <div className="fixed top-4 right-4 z-50">
-        <label className="relative inline-flex items-center cursor-pointer transform scale-100 md:scale-120">
-          {/* hidden checkbox */}
-          <input
-            type="checkbox"
-            className="sr-only peer"
-            checked={darkMode}
-            onChange={toggleTheme}
-          />
-          {/* rail */}
-          <div className="w-14 h-8 bg-muted-foreground peer-hover:bg-accent peer-focus:ring-accent rounded-full peer transition-colors"></div>
-          {/* ball */}
-          <div
-            className={`
-              absolute left-1 top-1 bg-background w-6 h-6 rounded-full
-              transform transition-transform
-              peer-checked:translate-x-6
-            `}
-          >
-            {/* dynamic icon inside ball */}
-            {darkMode ? (
-              <Sun className="w-4 h-4 text-yellow-500 m-1" />
-            ) : (
-              <Moon className="w-4 h-4 text-accent m-1" />
-            )}
-          </div>
-        </label>
+        <ThemeToggle />
       </div>
       <div className="font flex flex-col items-center justify-center min-h-screen">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4 p-4 md:w-3/4 sm:w-full mx-auto">
