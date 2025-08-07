@@ -7,8 +7,6 @@ const ThemeToggle = dynamic(() => import("../components/ThemeToggle"), {
 });
 
 export default function Home() {
-
-  const prefix = process.env.NODE_ENV === 'production' ? '/personal-webpage' : '';
   return (
     <div className="bg-background text-foreground">
       <div className="fixed top-4 right-4 z-50">
@@ -40,7 +38,7 @@ export default function Home() {
           {/* Right Column - Links */}
           <div className="flex text-2xl flex-col font-sans items-start p-4 sm:py-0 sm:px-4 w-full md:w-1/4 mx-auto text-left">
               <a
-                href={`${prefix}/cv`}
+                href="/cv"
                 className="flex items-center text-muted-foreground hover:text-accent transition-colors"
               >
                 <span className="mr-2">CV</span>
