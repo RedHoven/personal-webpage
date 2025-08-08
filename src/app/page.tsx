@@ -18,7 +18,7 @@ export default function Home() {
           <div className="text-2xl font-sans sm:flex sm:items-center px-4 py-2 text-left mx-auto">
             <div>
               <h1 className="text-accent"><b>Yahor Dziomin</b></h1>
-              <p className="text-muted-foreground text-xl md:text-2xl">Eager to advance <span className="text-accent">AI technology</span> and its applications.</p> 
+              <p className="text-muted-foreground text-xl md:text-2xl"> Making <span className="text-accent">AI</span> useful.</p> 
               <p className="text-muted-foreground text-xl md:text-2xl">Master student at&nbsp;
                 <span className="text-accent"> 
                   <a href="https://www.tudelft.nl/en/">
