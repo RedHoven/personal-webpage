@@ -3,7 +3,7 @@
 This is a personal webpage built with Next.js. 
 It showcases my CV and provides links to my social media profiles.
 
-Accessible at [https://redhoven.github.io/personal-webpage/](https://redhoven.github.io/personal-webpage/).
+Accessible at [https://yahordziomin.com](https://yahordziomin.com).
 
 ### :running: Running instructions
 
